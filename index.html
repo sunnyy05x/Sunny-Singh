@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Sunny Singh — Data Science & Physics student at Krea University. Developer, problem solver, and freelance web designer.">
+    <meta name="keywords"
+        content="Data Science, Physics, Python, C++, Web Development, Krea University, Sunny Singh, Developer, Portfolio">
+    <meta name="author" content="Sunny Singh">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sunny Singh | Data Science & Physics Student">
+    <meta property="og:description"
+        content="Building logic-driven applications and analyzing data. Portfolio of Sunny Singh.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sunny Singh | Data Science & Physics Student">
+    <meta property="twitter:description"
+        content="Building logic-driven applications and analyzing data. Portfolio of Sunny Singh.">
+
+    <title>Sunny Singh | Data Science & Physics Student</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-accent">S</span>unny<span class="logo-dot">.</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link" data-text="About">About</a>
+                <a href="#education" class="nav-link" data-text="Education">Education</a>
+                <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+                <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+                <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
+                <a href="#contact" class="nav-link nav-cta" data-text="Contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <canvas id="particle-canvas" class="particle-canvas"></canvas>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge anim-item">
+                    <span class="badge-dot"></span>
+                    B.Sc. (Hons) Student · Krea University
+                </div>
+                <h1 class="hero-title anim-item">
+                    Sunny
+                    <span class="title-highlight">Singh</span>
+                </h1>
+                <div class="hero-tagline anim-item">
+                    <span class="tagline-static">Exploring</span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <p class="hero-subtitle anim-item">
+                    Data Science & Physics student with a proven track record in developing high-performance
+                    applications and portfolios. Passionate about combining mathematical modeling with programming
+                    to build interactive, logic-driven applications and analyze data.
+                </p>
+                <div class="hero-pills anim-item">
+                    <span class="pill">Data Science</span>
+                    <span class="pill">Physics</span>
+                    <span class="pill">Web Development</span>
+                    <span class="pill">Game Design</span>
+                </div>
+                <div class="hero-actions anim-item">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image anim-item">
+                <div class="image-frame">
+                    <div class="image-border-glow"></div>
+                    <img src="profile.jpg" alt="Sunny Singh" class="profile-photo">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-chip">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-text">Projects</span>
+                    </div>
+                    <div class="stat-chip">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-text">Sites Live</span>
+                    </div>
+                    <div class="stat-chip">
+                        <span class="stat-number" data-count="3">0</span>
+                        <span class="stat-text">Languages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator anim-item">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header anim-item">
+                <span class="section-number">01</span>
+                <span class="section-label">About</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-content anim-item">
+                    <h2 class="section-title">Who I <span class="text-accent">Am</span></h2>
+                    <p class="about-text">
+                        I'm Sunny Singh — a Data Science and Physics student at Krea University, Sri City.
+                        I combine mathematical modeling with programming to build interactive, logic-driven applications
+                        and analyze complex data sets.
+                    </p>
+                    <p class="about-text">
+                        From designing strategy-based web games to deploying responsive portfolios for clients,
+                        I thrive on turning ideas into working products. I'm fluent in Python, C++, and modern
+                        web technologies, and I'm always exploring how physics and data science intersect.
+                    </p>
+                </div>
+                <div class="about-highlights anim-item">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Data Science & Analytics</h4>
+                            <p>Python, Pandas, Scikit-learn for data modeling and machine learning</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3" />
+                                <path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20" />
+                                <path d="M2 12h4M18 12h4M12 2v4M12 18v4" />
+                            </svg>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Physics & Mathematical Modeling</h4>
+                            <p>Bridging physics concepts with computational approaches and simulations</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                                <line x1="12" y1="2" x2="12" y2="22" />
+                            </svg>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Full-Stack Development</h4>
+                            <p>HTML5, CSS3, JavaScript for responsive web apps deployed on Vercel</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Game Logic & Design</h4>
+                            <p>Designing strategy games with complex state management and algorithms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="section-container">
+            <div class="section-header anim-item">
+                <span class="section-number">02</span>
+                <span class="section-label">Education</span>
+                <div class="section-line"></div>
+            </div>
+            <h2 class="section-title anim-item">Academic <span class="text-accent">Journey</span></h2>
+
+            <div class="education-timeline">
+                <div class="timeline-line">
+                    <div class="timeline-progress" id="timeline-progress"></div>
+                </div>
+
+                <div class="timeline-item anim-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-degree">B.Sc. (Hons) in Data Science & Physics</span>
+                        <h3 class="timeline-institution">Krea University, Sri City</h3>
+                        <p class="timeline-detail">Currently pursuing an honours degree combining data science
+                            methodologies
+                            with physics fundamentals. Expected Graduation: 2028.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item anim-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-degree">Higher Secondary Certificate (HSC) — PCM</span>
+                        <h3 class="timeline-institution">SVVM College, Pune</h3>
+                        <p class="timeline-detail">Completed HSC in Physics, Chemistry, and Mathematics in 2024.
+                            Strong foundation in quantitative reasoning and scientific methodology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (adapted from Teaching) -->
+    <section class="teaching" id="skills">
+        <div class="section-container">
+            <div class="section-header anim-item">
+                <span class="section-number">03</span>
+                <span class="section-label">Skills</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="teaching-grid">
+                <div class="teaching-content anim-item">
+                    <h2 class="section-title">Technical <span class="text-accent">Arsenal</span></h2>
+                    <p class="teaching-desc">
+                        A versatile toolkit spanning programming, data science, web technologies, and systems-level
+                        thinking. I combine these skills to build projects that are both technically robust and
+                        visually compelling.
+                    </p>
+                </div>
+                <div class="teaching-cards">
+                    <div class="teach-card anim-item">
+                        <div class="teach-card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="teach-card-body">
+                            <h3>Python & Data Science</h3>
+                            <span class="teach-level">Pandas · Scikit-learn · Data Modeling</span>
+                            <p>Building data pipelines, machine learning models, and analytical dashboards with Python's
+                                rich ecosystem.</p>
+                        </div>
+                    </div>
+
+                    <div class="teach-card anim-item">
+                        <div class="teach-card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </div>
+                        <div class="teach-card-body">
+                            <h3>C++ & Systems Programming</h3>
+                            <span class="teach-level">DSA · OOP · Assembly</span>
+                            <p>Low-level programming, data structures & algorithms, and performance-critical application
+                                development.</p>
+                        </div>
+                    </div>
+
+                    <div class="teach-card anim-item">
+                        <div class="teach-card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M3 3v18h18" />
+                                <path d="M18 17V9" />
+                                <path d="M13 17V5" />
+                                <path d="M8 17v-3" />
+                            </svg>
+                        </div>
+                        <div class="teach-card-body">
+                            <h3>Web Technologies & Deployment</h3>
+                            <span class="teach-level">HTML5 · CSS3 · JavaScript · Vercel</span>
+                            <p>Responsive web design, modern CSS, interactive frontends, and seamless deployment on
+                                Vercel.</p>
+                        </div>
+                    </div>
+
+                    <div class="teach-card anim-item">
+                        <div class="teach-card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <div class="teach-card-body">
+                            <h3>Mathematical Modeling</h3>
+                            <span class="teach-level">Physics Simulations · Game Logic · Algorithms</span>
+                            <p>Applying physics and math to game mechanics, algorithm design, and computational
+                                problem-solving.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (adapted from Research) -->
+    <section class="research" id="projects">
+        <div class="section-container">
+            <div class="section-header anim-item">
+                <span class="section-number">04</span>
+                <span class="section-label">Projects</span>
+                <div class="section-line"></div>
+            </div>
+            <h2 class="section-title anim-item">Featured <span class="text-accent">Projects</span></h2>
+            <p class="section-subtitle anim-item">From strategy games to professional portfolios —
+                building real products with clean code and elegant design.</p>
+
+            <div class="research-grid">
+                <div class="research-card anim-item">
+                    <div class="card-accent climate"></div>
+                    <div class="card-number">01</div>
+                    <span class="card-tag">Game Development</span>
+                    <h3 class="card-title">Multipoly — The Dimensional Trade</h3>
+                    <p class="card-desc">A strategy-based web game inspired by Monopoly, featuring a unique
+                        "Dimensional Trade" mechanic for resource management and crafting.</p>
+                    <ul class="card-list">
+                        <li>Complex game state management & turn logic</li>
+                        <li>Interactive game board with player tokens & animations</li>
+                        <li>Resource crafting system ("Lab Bench") & market trading</li>
+                    </ul>
+                    <div class="card-links">
+                        <a href="https://multipoly-the-dimensional-trade.vercel.app/" target="_blank" rel="noopener"
+                            class="card-link-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="research-card anim-item">
+                    <div class="card-accent health"></div>
+                    <div class="card-number">02</div>
+                    <span class="card-tag">Freelance Development</span>
+                    <h3 class="card-title">Client Portfolio Websites</h3>
+                    <p class="card-desc">Designed and deployed responsive portfolio websites for professors and
+                        educational institutes, with modern dark themes and animations.</p>
+                    <ul class="card-list">
+                        <li>GSAP scroll-reveal animations & particle backgrounds</li>
+                        <li>Mobile-responsive design with glassmorphism UI</li>
+                        <li>Vercel deployments with high uptime</li>
+                    </ul>
+                    <div class="card-links">
+                        <a href="https://brijesh-portfolio-47un.vercel.app/" target="_blank" rel="noopener"
+                            class="card-link-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span>Brijesh Jha</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="research-card anim-item">
+                    <div class="card-accent policy"></div>
+                    <div class="card-number">03</div>
+                    <span class="card-tag">Education Platform</span>
+                    <h3 class="card-title">NT Computer CSC Academy & 3D Digital Learning</h3>
+                    <p class="card-desc">Built professional web presences for educational institutions, integrating
+                        Python data pipelines with clean, responsive frontends.</p>
+                    <ul class="card-list">
+                        <li>Python (Pandas) for data integration workflows</li>
+                        <li>Responsive HTML5/CSS3 with mobile-first design</li>
+                        <li>SEO optimized & high-performance deployments</li>
+                    </ul>
+                    <div class="card-links">
+                        <a href="https://www.ntcomputer.in/" target="_blank" rel="noopener" class="card-link-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (adapted from Publications) -->
+    <section class="publications" id="experience">
+        <div class="section-container">
+            <div class="section-header anim-item">
+                <span class="section-number">05</span>
+                <span class="section-label">Experience</span>
+                <div class="section-line"></div>
+            </div>
+            <h2 class="section-title anim-item">Professional <span class="text-accent">Experience</span></h2>
+
+            <div class="publications-list">
+                <div class="pub-item anim-item">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">Asanvigyan Organization — Educational Content Developer (Physics)</h3>
+                        <span class="pub-journal">Mumbai (Remote) · April 2025 – June 2025</span>
+                        <p class="pub-abstract">Developed comprehensive educational content for Physics curricula,
+                            simplifying complex scientific concepts for digital audiences. Collaborated with the
+                            academic
+                            team to structure learning modules, ensuring accuracy and student engagement.</p>
+                        <div class="pub-tags">
+                            <span>Physics Education</span>
+                            <span>Content Development</span>
+                            <span>Digital Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item anim-item">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">Freelance Developer — The Orchestrators</h3>
+                        <span class="pub-journal">Remote · January 2026 – Present</span>
+                        <p class="pub-abstract">Designing and deploying responsive portfolio websites for professors
+                            at Krea University and educational institutes. Successfully launched and maintained multiple
+                            sites using Vercel with high uptime and mobile responsiveness.</p>
+                        <div class="pub-tags">
+                            <span>Web Development</span>
+                            <span>Freelance</span>
+                            <span>Vercel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item anim-item">
+                    <div class="pub-year">2020</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">51Ah (Debate Show) — Unit Coordinator</h3>
+                        <span class="pub-journal">Remote · January 2020 – January 2022</span>
+                        <p class="pub-abstract">Coordinated weekly debate sessions via Zoom, managing rosters and
+                            training new participants. Maintained detailed administrative records and ensured smooth
+                            operational flow during live sessions.</p>
+                        <div class="pub-tags">
+                            <span>Leadership</span>
+                            <span>Coordination</span>
+                            <span>Public Speaking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item anim-item">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">NGO Volunteer — Academic Tutor</h3>
+                        <span class="pub-journal">Pune · January 2022 – January 2024</span>
+                        <p class="pub-abstract">Taught Mathematics, English, and Science to children in under-resourced
+                            communities. Managed student attendance and administrative records while developing
+                            engaging learning activities.</p>
+                        <div class="pub-tags">
+                            <span>Teaching</span>
+                            <span>Volunteering</span>
+                            <span>Community Impact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-featured anim-item">
+                <span class="pub-featured-label">Languages Spoken</span>
+                <div class="pub-featured-logos">
+                    <span>English (Fluent)</span>
+                    <span>Hindi (Fluent)</span>
+                    <span>Marathi (Fluent)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header anim-item">
+                <span class="section-number">06</span>
+                <span class="section-label">Contact</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-wrapper">
+                <h2 class="section-title anim-item">Let's <span class="text-accent">Connect</span></h2>
+                <p class="contact-desc anim-item">
+                    Open to internships, freelance projects, and collaborations.
+                    Let's build something great together.
+                </p>
+                <div class="contact-cards anim-item">
+                    <a href="mailto:sunny91756@gmail.com" class="contact-card">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <span class="contact-card-label">Email</span>
+                        <span class="contact-card-value">sunny91756@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sunny-singh-323b25285" target="_blank" rel="noopener"
+                        class="contact-card">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        <span class="contact-card-label">LinkedIn</span>
+                        <span class="contact-card-value">Connect with me</span>
+                    </a>
+                    <a href="tel:+918788117178" class="contact-card">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <span class="contact-card-label">Phone</span>
+                        <span class="contact-card-value">+91 8788117178</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-accent">S</span>unny<span class="logo-dot">.</span>
+                </div>
+                <p class="footer-tagline">Data Science & Physics · Developer · Krea University</p>
+            </div>
+            <div class="footer-nav">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sunny Singh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
